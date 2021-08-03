@@ -81,54 +81,57 @@ been enabled, more detailed usage information will also be available.
 
 Currently available applets include:
 
-	[, [[, acpid, add-shell, addgroup, adduser, adjtimex, arch, arp,
-	arping, ash, awk, base64, basename, bc, beep, blkdiscard, blkid,
-	blockdev, bootchartd, brctl, bunzip2, bzcat, bzip2, cal, cat, chat,
-	chattr, chgrp, chmod, chown, chpasswd, chpst, chroot, chrt, chvt,
-	cksum, clear, cmp, comm, conspy, cp, cpio, crond, crontab, cryptpw,
-	cttyhack, cut, date, dc, dd, deallocvt, delgroup, deluser, depmod,
-	devmem, df, dhcprelay, diff, dirname, dmesg, dnsd, dnsdomainname,
-	dos2unix, dpkg, dpkg-deb, du, dumpkmap, dumpleases, echo, ed, egrep,
-	eject, env, envdir, envuidgid, ether-wake, expand, expr, factor,
-	fakeidentd, fallocate, false, fatattr, fbset, fbsplash, fdflush,
-	fdformat, fdisk, fgconsole, fgrep, find, findfs, flock, fold, free,
-	freeramdisk, fsck, fsck.minix, fsfreeze, fstrim, fsync, ftpd,
-	ftpget, ftpput, fuser, getopt, getty, grep, groups, gunzip, gzip,
-	halt, hd, hdparm, head, hexdump, hexedit, hostid, hostname, httpd,
-	hush, hwclock, i2cdetect, i2cdump, i2cget, i2cset, i2ctransfer, id,
-	ifconfig, ifdown, ifenslave, ifplugd, ifup, inetd, init, insmod,
-	install, ionice, iostat, ip, ipaddr, ipcalc, ipcrm, ipcs, iplink,
-	ipneigh, iproute, iprule, iptunnel, kbd_mode, kill, killall,
-	killall5, klogd, last, less, link, linux32, linux64, linuxrc, ln,
-	loadfont, loadkmap, logger, login, logname, logread, losetup, lpd,
-	lpq, lpr, ls, lsattr, lsmod, lsof, lspci, lsscsi, lsusb, lzcat,
-	lzma, lzop, makedevs, makemime, man, md5sum, mdev, mesg, microcom,
-	mim, mkdir, mkdosfs, mke2fs, mkfifo, mkfs.ext2, mkfs.minix,
+	[, [[, acpid, add-shell, addgroup, adduser, adjtimex, ar, arch, arp,
+	arping, ash, awk, base64, basename, bbconfig, bc, beep, blkdiscard,
+	blkid, blockdev, bootchartd, brctl, bunzip2, busybox, bzcat, bzip2,
+	cal, cat, chat, chattr, chgrp, chmod, chown, chpasswd, chpst,
+	chroot, chrt, chvt, cksum, clear, cmp, comm, conspy, cp, cpio,
+	crond, crontab, cryptpw, cttyhack, cut, date, dc, dd, deallocvt,
+	delgroup, deluser, depmod, devfsd, devmem, df, dhcprelay, diff,
+	dirname, dmesg, dnsd, dnsdomainname, dos2unix, dpkg, dpkg-deb, du,
+	dumpkmap, dumpleases, echo, ed, egrep, eject, env, envdir,
+	envuidgid, ether-wake, expand, expr, factor, fakeidentd, fallocate,
+	false, fatattr, fbset, fbsplash, fdflush, fdformat, fdisk,
+	fgconsole, fgrep, find, findfs, flash_eraseall, flash_lock,
+	flash_unlock, flashcp, flock, fold, free, freeramdisk, fsck,
+	fsck.minix, fsfreeze, fstrim, fsync, ftpd, ftpget, ftpput, fuser,
+	getopt, getty, grep, groups, gunzip, gzip, halt, hd, hdparm, head,
+	hexdump, hexedit, hostid, hostname, httpd, hush, hwclock, i2cdetect,
+	i2cdump, i2cget, i2cset, i2ctransfer, id, ifconfig, ifdown,
+	ifenslave, ifplugd, ifup, inetd, init, inotifyd, insmod, install,
+	ionice, iostat, ip, ipaddr, ipcalc, ipcrm, ipcs, iplink, ipneigh,
+	iproute, iprule, iptunnel, kbd_mode, kill, killall, killall5, klogd,
+	last, less, link, linux32, linux64, linuxrc, ln, loadfont, loadkmap,
+	logger, login, logname, logread, losetup, lpd, lpq, lpr, ls, lsattr,
+	lsmod, lsof, lspci, lsscsi, lsusb, lzcat, lzma, lzop, lzopcat,
+	makedevs, makemime, man, md5sum, mdev, mesg, microcom, mim, minips,
+	mkdir, mkdosfs, mke2fs, mkfifo, mkfs.ext2, mkfs.minix, mkfs.reiser,
 	mkfs.vfat, mknod, mkpasswd, mkswap, mktemp, modinfo, modprobe, more,
 	mount, mountpoint, mpstat, mt, mv, nameif, nanddump, nandwrite,
-	nbd-client, nc, netstat, nice, nl, nmeter, nohup, nologin, nproc,
-	nsenter, nslookup, ntpd, nuke, od, openvt, partprobe, passwd, paste,
+	nbd-client, nc, netcat, netstat, nice, nl, nmeter, nohup, nologin,
+	nproc, nslookup, ntpd, nuke, od, openvt, partprobe, passwd, paste,
 	patch, pgrep, pidof, ping, ping6, pipe_progress, pivot_root, pkill,
 	pmap, popmaildir, poweroff, powertop, printenv, printf, ps, pscan,
 	pstree, pwd, pwdx, raidautorun, rdate, rdev, readahead, readlink,
 	readprofile, realpath, reboot, reformime, remove-shell, renice,
-	reset, resize, resume, rev, rm, rmdir, rmmod, route, rpm, rpm2cpio,
-	rtcwake, run-init, run-parts, runlevel, runsv, runsvdir, rx, script,
-	scriptreplay, sed, sendmail, seq, setarch, setconsole, setfattr,
-	setfont, setkeycodes, setlogcons, setpriv, setserial, setsid,
-	setuidgid, sh, sha1sum, sha256sum, sha3sum, sha512sum, showkey,
-	shred, shuf, slattach, sleep, smemcap, softlimit, sort, split,
-	ssl_client, start-stop-daemon, stat, strings, stty, su, sulogin,
-	sum, sv, svc, svlogd, svok, swapoff, swapon, switch_root, sync,
-	sysctl, syslogd, tac, tail, tar, taskset, tc, tcpsvd, tee, telnet,
-	telnetd, test, tftp, tftpd, time, timeout, top, touch, tr,
+	reset, resize, resume, rev, rfkill, rm, rmdir, rmmod, route, rpm,
+	rpm2cpio, rtcwake, run-init, run-parts, runlevel, runsv, runsvdir,
+	rx, script, scriptreplay, sed, sendmail, seq, setarch, setconsole,
+	setfattr, setfont, setkeycodes, setlogcons, setpriv, setserial,
+	setsid, setuidgid, sh, sha1sum, sha256sum, sha3sum, sha512sum,
+	showkey, shred, shuf, slattach, sleep, smemcap, softlimit, sort,
+	split, ssl_client, start-stop-daemon, stat, strings, stty, su,
+	sulogin, sum, sv, svc, svlogd, svok, swapoff, swapon, switch_root,
+	sync, sysctl, syslogd, tac, tail, tar, taskset, tc, tcpsvd, tee,
+	telnet, telnetd, test, tftp, tftpd, time, timeout, top, touch, tr,
 	traceroute, traceroute6, true, truncate, ts, tty, ttysize, tunctl,
-	ubiattach, ubidetach, ubimkvol, ubirename, ubirmvol, ubirsvol,
-	ubiupdatevol, udhcpc, udhcpc6, udhcpd, udpsvd, uevent, umount,
-	uname, unexpand, uniq, unix2dos, unlink, unlzma, unshare, unxz,
-	unzip, uptime, users, usleep, uudecode, uuencode, vconfig, vi,
-	vlock, volname, w, wall, watch, watchdog, wc, wget, which, who,
-	whoami, whois, xargs, xxd, xz, xzcat, yes, zcat, zcip
+	tune2fs, ubiattach, ubidetach, ubimkvol, ubirename, ubirmvol,
+	ubirsvol, ubiupdatevol, udhcpc, udhcpc6, udhcpd, udpsvd, uevent,
+	umount, uname, uncompress, unexpand, uniq, unix2dos, unlink, unlzma,
+	unlzop, unshare, unxz, unzip, uptime, users, usleep, uudecode,
+	uuencode, vconfig, vi, vlock, volname, w, wall, watch, watchdog, wc,
+	wget, which, who, whoami, whois, xargs, xxd, xz, xzcat, yes, zcat,
+	zcip
 
 =head1 COMMAND DESCRIPTIONS
 
@@ -194,6 +197,18 @@ Read or set kernel time variables. See adjtimex(2)
 	-t TICK	Microseconds per tick, usually 10000
 		(positive -t or -f values make clock run faster)
 	-p TCONST
+
+=item B<ar>
+
+ar [-o] [-v] [-p] [-t] [-x] ARCHIVE FILES
+
+Extract or list FILES from an ar archive
+
+	-o	Preserve original dates
+	-p	Extract to stdout
+	-t	List
+	-x	Extract
+	-v	Verbose
 
 =item B<arch>
 
@@ -267,6 +282,12 @@ Base64 encode or decode FILE to standard output
 basename FILE [SUFFIX]
 
 Strip directory path and .SUFFIX from FILE
+
+=item B<bbconfig>
+
+bbconfig 
+
+Print the config file used by busybox build
 
 =item B<bc>
 
@@ -793,6 +814,20 @@ Generate modules.dep.bb
 
 	-n	Dry run: print file to stdout
 
+=item B<devfsd>
+
+devfsd mntpnt [-v][-fg][-np]
+
+Manage devfs permissions and old device name symlinks
+
+	mntpnt	The mount point where devfs is mounted
+	-v	Print the protocol version numbers for devfsd
+		and the kernel-side protocol version and exit
+	-fg	Run in foreground
+	-np	Exit after parsing the configuration file
+		and processing synthetic REGISTER events,
+		don't poll for events
+
 =item B<devmem>
 
 devmem ADDRESS [WIDTH [VALUE]]
@@ -1214,6 +1249,37 @@ findfs LABEL=label or UUID=uuid
 
 Find a filesystem device based on a label or UUID
 
+=item B<flash_eraseall>
+
+flash_eraseall [-jNq] MTD_DEVICE
+
+Erase an MTD device
+
+	-j	Format the device for jffs2
+	-N	Don't skip bad blocks
+	-q	Don't display progress messages
+
+=item B<flash_lock>
+
+flash_lock MTD_DEVICE OFFSET SECTORS
+
+Lock part or all of an MTD device. If SECTORS is -1, then all sectors
+will be locked, regardless of the value of OFFSET
+
+=item B<flash_unlock>
+
+flash_unlock MTD_DEVICE
+
+Unlock an MTD device
+
+=item B<flashcp>
+
+flashcp -v FILE MTD_DEVICE
+
+Copy an image to MTD device
+
+	-v	Verbose
+
 =item B<flock>
 
 flock [-sxun] FD|{FILE [-c] PROG ARGS}
@@ -1405,7 +1471,7 @@ BAUD_RATE of 0 leaves it unchanged
 
 =item B<grep>
 
-grep [-HhnlLoqvsrRiwFE] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...
+grep [-HhnlLoqvsrRiwFEz] [-m N] [-A/B/C N] PATTERN/-e PATTERN.../-f FILE [FILE]...
 
 Search for PATTERN in FILEs (or stdin)
 
@@ -1426,6 +1492,7 @@ Search for PATTERN in FILEs (or stdin)
 	-x	Match whole lines only
 	-F	PATTERN is a literal (not regexp)
 	-E	PATTERN is an extended regexp
+	-z	Input is NUL terminated
 	-m N	Match up to N times per file
 	-A N	Print N lines of trailing context
 	-B N	Print N lines of leading context
@@ -1452,10 +1519,11 @@ Decompress FILEs (or stdin)
 
 =item B<gzip>
 
-gzip [-cfkdt] [FILE]...
+gzip [-cfkdt123456789] [FILE]...
 
 Compress FILEs (or stdin)
 
+	-1..9	Compression level
 	-d	Decompress
 	-t	Test file integrity
 	-c	Write to stdout
@@ -1820,6 +1888,37 @@ HUP: reload /etc/inittab
 TSTP: stop respawning until CONT
 QUIT: re-exec another init
 USR1/TERM/USR2/INT: run halt/reboot/poweroff/Ctrl-Alt-Del script
+
+=item B<inotifyd>
+
+inotifyd PROG FILE1[:MASK]...
+
+Run PROG on filesystem changes.
+When a filesystem event matching MASK occurs on FILEn,
+PROG ACTUAL_EVENTS FILEn [SUBFILE] is run.
+If PROG is -, events are sent to stdout.
+Events:
+
+	a	File is accessed
+	c	File is modified
+	e	Metadata changed
+	w	Writable file is closed
+	0	Unwritable file is closed
+	r	File is opened
+	D	File is deleted
+	M	File is moved
+	u	Backing fs is unmounted
+	o	Event queue overflowed
+	x	File can't be watched anymore
+If watching a directory:
+
+	y	Subfile is moved into dir
+	m	Subfile is moved out of dir
+	n	Subfile is created
+	d	Subfile is deleted
+
+inotifyd waits for PROG to exit.
+When x event happens for all FILEs, inotifyd exits.
 
 =item B<insmod>
 
@@ -2269,6 +2368,13 @@ lzop [-cfUvd123456789CF] [FILE]...
 	-F	Don't store or verify checksum
 	-C	Also write checksum of compressed block
 
+=item B<lzopcat>
+
+lzopcat [-vF] [FILE]...
+
+	-v	Verbose
+	-F	Don't verify checksum
+
 =item B<makedevs>
 
 makedevs [-d device_table] rootdir
@@ -2375,6 +2481,15 @@ Run a script from a Makefile-like specification file
 
 	-f FILE		Spec file (default Mimfile)
 
+=item B<minips>
+
+minips [-o COL1,COL2=HEADER] [-T]
+
+Show list of processes
+
+	-o COL1,COL2=HEADER	Select columns for display
+	-T			Show threads
+
 =item B<mkdir>
 
 mkdir [OPTIONS] DIRECTORY...
@@ -2436,6 +2551,15 @@ Make a MINIX filesystem
 	-i INODES	Number of inodes for the filesystem
 	-l FILE		Read bad blocks list from FILE
 	-v		Make version 2 filesystem
+
+=item B<mkfs.reiser>
+
+mkfs.reiser [-f] [-l LABEL] BLOCKDEV [4K-BLOCKS]
+
+Make a ReiserFS V3 filesystem
+
+	-f	Force
+	-l LBL	Volume label
 
 =item B<mkfs.vfat>
 
@@ -2523,7 +2647,9 @@ mount [OPTIONS] [-o OPT] DEVICE NODE
 Mount a filesystem. Filesystem autodetection requires /proc.
 
 	-a		Mount all filesystems in fstab
-	-f		Dry run
+	-f		Update /etc/mtab, but don't mount
+	-i		Don't run mount helper
+	-n		Don't update /etc/mtab
 	-v		Verbose
 	-r		Read-only mount
 	-t FSTYPE[,...]	Filesystem type(s)
@@ -2661,6 +2787,24 @@ nc [OPTIONS] -l -p PORT [HOST] [PORT]  - listen
 	-o FILE	Hex dump traffic
 	-z	Zero-I/O mode (scanning)
 
+=item B<netcat>
+
+netcat [OPTIONS] HOST PORT  - connect
+nc [OPTIONS] -l -p PORT [HOST] [PORT]  - listen
+
+	-e PROG	Run PROG after connect (must be last)
+	-l	Listen mode, for inbound connects
+	-lk	With -e, provides persistent server
+	-p PORT	Local port
+	-s ADDR	Local address
+	-w SEC	Timeout for connects and final net reads
+	-i SEC	Delay interval for lines sent
+	-n	Don't do DNS resolution
+	-u	UDP mode
+	-v	Verbose
+	-o FILE	Hex dump traffic
+	-z	Zero-I/O mode (scanning)
+
 =item B<netstat>
 
 netstat [-ral] [-tuwx] [-enWp]
@@ -2748,24 +2892,6 @@ Print number of available CPUs
 
 	--all		Number of installed CPUs
 	--ignore=N	Exclude N CPUs
-
-=item B<nsenter>
-
-nsenter [OPTIONS] [PROG [ARGS]]
-
-	-t PID		Target process to get namespaces from
-	-m[FILE]	Enter mount namespace
-	-u[FILE]	Enter UTS namespace (hostname etc)
-	-i[FILE]	Enter System V IPC namespace
-	-n[FILE]	Enter network namespace
-	-p[FILE]	Enter pid namespace
-	-U[FILE]	Enter user namespace
-	-S UID		Set uid in entered namespace
-	-G GID		Set gid in entered namespace
-	--preserve-credentials	Don't touch uids or gids
-	-r[DIR]		Set root directory
-	-w[DIR]		Set working directory
-	-F		Don't fork before exec'ing PROG
 
 =item B<nslookup>
 
@@ -3158,6 +3284,21 @@ Restore system state from 'suspend-to-disk' data in BLOCKDEV
 rev [FILE]...
 
 Reverse lines of FILE
+
+=item B<rfkill>
+
+rfkill COMMAND [INDEX|TYPE]
+
+Enable/disable wireless devices
+
+Commands:
+
+	list [INDEX|TYPE]	List current state
+	block INDEX|TYPE	Disable device
+	unblock INDEX|TYPE	Enable device
+
+	TYPE: all, wlan(wifi), bluetooth, uwb(ultrawideband),
+		wimax, wwan, gps, fm
 
 =item B<rm>
 
@@ -3865,11 +4006,9 @@ execute NEW_INIT. PID must be 1. NEW_ROOT must be a mountpoint.
 
 =item B<sync>
 
-sync [-df] [FILE]...
+sync 
 
-Write all buffered blocks (in FILEs) to disk
-	-d	Avoid syncing metadata
-	-f	Sync filesystems underlying FILEs
+Write all buffered blocks to disk
 
 =item B<sysctl>
 
@@ -3930,7 +4069,7 @@ N may be suffixed by k (x1024), b (x512), or m (x1024^2).
 
 =item B<tar>
 
-tar c|x|t [-zJjahmvokO] [-f TARFILE] [-C DIR] [-T FILE] [-X FILE] [--exclude PATTERN]... [FILE]...
+tar c|x|t [-ZzJjahmvokO] [-f TARFILE] [-C DIR] [-T FILE] [-X FILE] [--exclude PATTERN]... [FILE]...
 
 Create, extract, or list files from a tar file
 
@@ -3944,6 +4083,7 @@ Create, extract, or list files from a tar file
 	-m	Don't restore mtime
 	-o	Don't restore user:group
 	-k	Don't replace existing files
+	-Z	(De)compress using compress
 	-z	(De)compress using gzip
 	-J	(De)compress using xz
 	-j	(De)compress using bzip2
@@ -4226,6 +4366,12 @@ Create or delete tun interfaces
 	-g group	Set iface group
 	-b		Brief output
 
+=item B<tune2fs>
+
+tune2fs [-c MAX_MOUNT_COUNT] [-i DAYS] [-C MOUNT_COUNT] [-L LABEL] BLOCKDEV
+
+Adjust filesystem options on ext[23] filesystems
+
 =item B<ubiattach>
 
 ubiattach -m MTD_NUM [-d UBI_NUM] [-O VID_HDR_OFF] UBI_CTRL_DEV
@@ -4294,10 +4440,11 @@ Update UBI volume
 =item B<udhcpc>
 
 udhcpc [-fbqvRB] [-a[MSEC]] [-t N] [-T SEC] [-A SEC/-n]
-	[-i IFACE] [-s PROG] [-p PIDFILE]
+	[-i IFACE] [-P PORT] [-s PROG] [-p PIDFILE]
 	[-oC] [-r IP] [-V VENDOR] [-F NAME] [-x OPT:VAL]... [-O OPT]...
 
 	-i IFACE	Interface to use (default eth0)
+	-P PORT		Use PORT (default 68)
 	-s PROG		Run PROG at DHCP events (default /usr/share/udhcpc/default.script)
 	-p FILE		Create pidfile
 	-B		Request broadcast replies
@@ -4332,7 +4479,7 @@ Signals:
 =item B<udhcpc6>
 
 udhcpc6 [-fbnqvodR] [-i IFACE] [-r IPv6] [-s PROG] [-p PIDFILE]
-	[-x OPT:VAL]... [-O OPT]...
+	[-x OPT:VAL]... [-O OPT]... [-P N]
 
 	-i IFACE	Interface to use (default eth0)
 	-p FILE		Create pidfile
@@ -4347,6 +4494,7 @@ udhcpc6 [-fbnqvodR] [-i IFACE] [-r IPv6] [-s PROG] [-p PIDFILE]
 	-q		Exit after obtaining lease
 	-R		Release IP on exit
 	-S		Log to syslog too
+	-P N		Use port N (default 546)
 	-O OPT		Request option OPT from server (cumulative)
 	-o		Don't request any options (unless -O is given)
 	-r IPv6		Request this address ('no' to not request any IP)
@@ -4367,7 +4515,7 @@ Signals:
 
 =item B<udhcpd>
 
-udhcpd [-fS] [-I ADDR] [CONFFILE]
+udhcpd [-fS] [-I ADDR] [-P N] [CONFFILE]
 
 DHCP server
 
@@ -4375,6 +4523,7 @@ DHCP server
 	-S	Log to syslog too
 	-I ADDR	Local address
 	-a MSEC	Timeout for ARP ping (default 2000)
+	-P N	Use port N (default 67)
 Signals:
 
 	USR1	Update lease file
@@ -4419,7 +4568,8 @@ umount [OPTIONS] FILESYSTEM|DIRECTORY
 
 Unmount file systems
 
-	-a	Unmount all file systems
+	-a	Unmount all file systems in /etc/mtab
+	-n	Don't erase /etc/mtab entries
 	-r	Try to remount devices as read-only if mount is busy
 	-l	Lazy umount (detach filesystem)
 	-f	Force umount (i.e., unreachable NFS server)
@@ -4441,6 +4591,15 @@ Print system information
 	-v	Kernel version
 	-i	The hardware platform
 	-o	OS name
+
+=item B<uncompress>
+
+uncompress [-cf] [FILE]...
+
+Decompress .Z file[s]
+
+	-c	Write to stdout
+	-f	Overwrite
 
 =item B<unexpand>
 
@@ -4491,6 +4650,16 @@ Decompress FILE (or stdin)
 	-c	Write to stdout
 	-f	Force
 	-k	Keep input files
+
+=item B<unlzop>
+
+unlzop [-cfUvF] [FILE]...
+
+	-c	Write to stdout
+	-f	Force
+	-U	Delete input files
+	-v	Verbose
+	-F	Don't verify checksum
 
 =item B<unshare>
 

@@ -1,0 +1,39 @@
+
+
+make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm O=../vexpress/out/linux  vexpress_defconfig
+
+
+make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm O=../vexpress/out/linux  menuconfig
+
+make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm O=../vexpress/out/linux zImage -j2
+
+make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm O=../vexpress/out/linux dtbs
+
+qemu-system-arm \
+-M vexpress-a9 \
+-m 512M \
+-kernel /docker/opt/vexpress/out/linux/arch/arm/boot/zImage \
+-dtb /docker/opt/vexpress/out/linux/arch/arm/boot/dts/vexpress-v2p-ca9.dtb \
+-nographic \
+-append "root=/dev/mmcblk0 rw init=/linuxrc console=ttyAMA0"  \
+-sd /docker/opt/vexpress/a9rootfs.ext3
+
+
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi- vexpress_ca9x4_defconfig
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabi-
+
+arm-linux-gnueabi
+arm-linux
+
+arm-none-linux-gnueabi
+arm-none-eabi
+
+
+
+qemu-system-arm \
+-M vexpress-a9 \
+-m 512M \
+-kernel u-boot \
+-nographic
