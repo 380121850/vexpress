@@ -107,7 +107,9 @@ kernel: prepare
 	#cp $(KERNEL_DIR)/rootfs-initramfs.cfg $(PUB_KERNEL_TARGET_DIR)/
 	make -C $(KERNEL_DIR) ARCH=arm CROSS_COMPILE=$(OSDRV_CROSS)- O=$(PUB_KERNEL_TARGET_DIR)  $(KERNEL_CFG)
 	make -C $(KERNEL_DIR) ARCH=arm CROSS_COMPILE=$(OSDRV_CROSS)- O=$(PUB_KERNEL_TARGET_DIR)  zImage -j 16 
+	make -C $(KERNEL_DIR) ARCH=arm CROSS_COMPILE=$(OSDRV_CROSS)- O=$(PUB_KERNEL_TARGET_DIR)  dtbs -j 16 
 	cp $(PUB_KERNEL_TARGET_DIR)/arch/arm/boot/zImage $(PUB_IMAGE_DIR)/
+	cp $(PUB_KERNEL_TARGET_DIR)/arch/arm/boot/dts/vexpress-v2p-ca9.dtb $(PUB_IMAGE_DIR)/
 
 kernel_menuconfig:
 	cp $(OSDRV_DIR)/$(KERNEL_VER)/$(KERNEL_CFG) $(OSDRV_DIR)/$(KERNEL_VER)/arch/arm/configs/$(KERNEL_CFG)_defconfig
@@ -130,11 +132,20 @@ rootfs_prepare: prepare busybox
 	@echo "---------task [3] prepare rootfs "
 	#tar xzf $(OSDRV_DIR)/rootfs/$(ROOT_FS_TAR) -C $(OSDRV_DIR)/pub
 	cp -af $(ROOTFS_DIR) $(PUB_IMAGE_DIR)/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/proc/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/sys/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/tmp/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/root/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/var/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/var/
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/mnt/
+	
 	cp -af $(OSDRV_DIR)/$(ROOT_BIN_SH) $(PUB_IMAGE_DIR)/
 	cp -af $(PUB_IMAGE_DIR)/_install/* $(PUB_IMAGE_DIR)/$(ROOT_FS)/
 
 rootfs_dev: prepare
 	@echo "---------task [4] prepare rootfs "
+	mkdir -p $(PUB_IMAGE_DIR)/$(ROOT_FS)/dev/
 	mknod $(PUB_IMAGE_DIR)/$(ROOT_FS)/dev/tty1 c 4 1
 	mknod $(PUB_IMAGE_DIR)/$(ROOT_FS)/dev/tty2 c 4 2
 	mknod $(PUB_IMAGE_DIR)/$(ROOT_FS)/dev/tty3 c 4 3

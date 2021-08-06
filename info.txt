@@ -11,12 +11,13 @@ make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm O=../vexpress/out/linux dtbs
 
 qemu-system-arm \
 -M vexpress-a9 \
+-smp 2 \
 -m 512M \
--kernel /docker/opt/vexpress/out/linux/arch/arm/boot/zImage \
--dtb /docker/opt/vexpress/out/linux/arch/arm/boot/dts/vexpress-v2p-ca9.dtb \
+-kernel /docker/opt/vexpress/out/vexpress_spi_image_glibc/zImage \
+-dtb /docker/opt/vexpress/out/vexpress_spi_image_glibc/vexpress-v2p-ca9.dtb \
 -nographic \
 -append "root=/dev/mmcblk0 rw init=/linuxrc console=ttyAMA0"  \
--sd /docker/opt/vexpress/a9rootfs.ext3
+-sd /docker/opt/vexpress/out/vexpress_spi_image_glibc/a9rootfs.ext3
 
 
 
