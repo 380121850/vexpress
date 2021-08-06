@@ -11,7 +11,7 @@ make CROSS_COMPILE=arm-linux-gnueabi- ARCH=arm O=../vexpress/out/linux dtbs
 
 qemu-system-arm \
 -M vexpress-a9 \
--smp 2 \
+-smp 4 \
 -m 512M \
 -kernel /docker/opt/vexpress/out/vexpress_spi_image_glibc/zImage \
 -dtb /docker/opt/vexpress/out/vexpress_spi_image_glibc/vexpress-v2p-ca9.dtb \
